@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            max-width: 50%;
+            height: 50%;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #1e1f1e;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #515651;
+        }
+        .message {
+            margin-top: 10px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+        <!--heading-->
+        <h1 style="text-align: center;">The Steak House</h1>
+        <!-- nav bar -->
+        <div class="topnav">
+            <a class href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Location</a>
+            <a href="reservation.html">Reservation</a>
+          </div>
+    <!-- a rervation form -->
+    <div class="center">
+        <form id="reservationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="message" id="reservationMessage">
+        Reservation is Complete. Thank you!
+    </div>
+
+    <script>
+        // JavaScript for form submission handling and message display
+        document.getElementById("reservationForm").addEventListener("submit", function(event) {
+            // Prevent the form from submitting
+            event.preventDefault();
+            // Display the reservation message
+            document.getElementById("reservationMessage").style.display = "block";
+            // Optional: You can also reset the form fields after submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>

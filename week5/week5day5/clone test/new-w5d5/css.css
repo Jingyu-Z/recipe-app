@@ -1,0 +1,45 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    justify-self: center;
+  }
+  /* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #24070a;
+    color: rgb(161, 155, 155);
+  }
+
+/* make the image align center */
+ .center{
+    width: 820px;
+    margin: 20px auto;
+ }
+.center img{
+    width: 100%;
+}
+
+/* adjust font size and margin of "our story" */
+ .story{
+    font-size: medium;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 190px;
+    margin-right: 190px;
+ }
